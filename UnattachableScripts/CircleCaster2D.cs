@@ -21,6 +21,12 @@ namespace Fiziks2D
 
            int[]  ignoredLayer = new int[] { gObject.layer };
            mask = LayerMaskGenerator.Generate(LayerMaskGenerator.Ignore.SpecifiedLayer, ignoredLayer);
+
+
+
+            Debug.Log("<color=navy>" + 
+                "Athlete is on [" + LayerMask.LayerToName(gObject.layer) + "] layer. " + "GroundDetector is ignoring this layer. "
+                + "</color>");
         }
 
 
