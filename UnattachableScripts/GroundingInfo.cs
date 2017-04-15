@@ -13,6 +13,7 @@ namespace Fiziks2D
         public GameObject GroundBeingDetected { get;   set; }
         public bool IsGrounding { get;  set; }
         public bool HasTakenOff { get;  set; } // ?
+        public RaycastHit2D HitInfo { get; set; }
     }
 
 
