@@ -14,7 +14,7 @@ namespace Fiziks2D
 
         public GravityCalculator2D()
         {
-            GravityAccel = 10f;
+            GravityAccel = 8f;
         }
 
         
