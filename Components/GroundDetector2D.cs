@@ -15,7 +15,7 @@ namespace Fiziks2D
 
         public void Start()
         {
-            Caster = new CircleCaster2D(this.gameObject);
+           Caster = new CircleCaster2D(this.gameObject);
             economizer = new RayCastEconomizer2D();
         }
 

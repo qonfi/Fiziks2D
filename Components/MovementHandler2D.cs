@@ -15,7 +15,7 @@ namespace Fiziks2D
         // しかしかなり洗練されてきているので3Dのほうでもこのクラスは参考にしたい。
 
         private List<IMovementCalculator2D> calculators;
-
+        public Vector2 TotalMovement { get; private set; }
 
         private void Start()
         {
@@ -26,14 +26,14 @@ namespace Fiziks2D
 
         private void Update()
         {
-            Vector2 totalMovement = Vector2.zero;
+            TotalMovement = Vector2.zero;
 
             foreach (IMovementCalculator2D calcator in calculators)
             {
-                totalMovement += calcator.MovementPerFrame;
+                TotalMovement += calcator.MovementPerFrame;
             }
 
-            transform.Translate(totalMovement * Time.deltaTime);
+            transform.Translate(TotalMovement * Time.deltaTime);
         }
 
     }
