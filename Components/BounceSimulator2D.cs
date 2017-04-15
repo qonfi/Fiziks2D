@@ -20,8 +20,6 @@ namespace Fiziks2D
         }
 
 
-
-
         private void Update()
         {
             if (detector.Info == null) { return; }
@@ -32,7 +30,7 @@ namespace Fiziks2D
                 // 衝突前に進行してきた方向を考慮して跳ね返ると更によい。
                 Vector2 bounceDirection = detector.Info.HitInfo.normal;
 
-                MovementPerFrame =  bounceDirection * 8f;
+                MovementPerFrame =  bounceDirection * 6f;
             }
 
         }

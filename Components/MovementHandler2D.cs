@@ -17,6 +17,7 @@ namespace Fiziks2D
         private List<IMovementCalculator2D> calculators;
         public Vector2 TotalMovement { get; private set; }
 
+
         private void Start()
         {
             calculators = new List<IMovementCalculator2D>();

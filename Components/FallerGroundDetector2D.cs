@@ -10,25 +10,17 @@ namespace Fiziks2D
     {
         public IRayCaster2D Caster { get; set; }
         public GroundingInfo Info { get; set; }
-        private string GroundName { get; set; }
-        public bool Fallen { get; private set; }
 
         public void Start()
         {
-            GroundName = "Ground";
-            Caster = new CircleCaster2D(this.gameObject, 0.5f, 0.1f);
+            Caster = new CircleCaster2D(this.gameObject, 0.2f, 0.02f);
         }
 
 
         public void Update()
         {
             Info = Caster.Cast(this.transform.position);
-
-            if (Info.LastDetectedGround == null) { return; }
-            if ( Info.LastDetectedGround.name == GroundName)
-            {
-                Fallen = true;
-            }
+            
         }
 
 
